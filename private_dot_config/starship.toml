@@ -1,0 +1,43 @@
+# A minimal left prompt
+format = """$all"""
+
+# move the rest of the prompt to the right
+right_format = """$kubernetes $battery"""
+
+[fill]
+disabled = true
+symbol = "-"
+style = "bold green"
+
+[character]
+success_symbol = "[▶](bold green) "
+error_symbol = "[✗](bold red) "
+
+[directory]
+truncation_symbol = "…/"
+style = "bold cyan"
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
+threshold = 30
+style = "bold red"
+
+[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
+threshold = 40
+style = "bold yellow"
+
+[gcloud]
+disabled = true
+
+[kubernetes]
+format = '[$symbol$namespace]($style)'
+disabled = false
+style = "dimmed green"
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+".*/openshift-cluster/.*" = "openshift"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
