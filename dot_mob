@@ -1,0 +1,6 @@
+MOB_TIMER_ROOM="TODO"
+MOB_NOTIFY_MESSAGE="mob next"
+MOB_VOICE_COMMAND="say -r 50 -v Grandpa \"%s\""
+#MOB_NOTIFY_COMMAND="/usr/bin/osascript -e 'display notification \"%s\"'"
+MOB_VOICE_MESSAGE="mob [[ slnc 200 ]] [[pbas 100]] 'next'"
+MOB_OPEN_COMMAND="idea %s"
