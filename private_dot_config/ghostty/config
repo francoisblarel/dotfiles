@@ -1,0 +1,7 @@
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+background = 282c34
+
+keybind = global:alt+escape=toggle_quick_terminal
+quick-terminal-position = bottom
+quick-terminal-size = 75%
